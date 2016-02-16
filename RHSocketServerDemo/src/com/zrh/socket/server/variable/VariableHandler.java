@@ -19,7 +19,7 @@ public class VariableHandler extends SimpleChannelInboundHandler<String> {
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println("RemoteAddress: " + ctx.channel().remoteAddress() + " active!");
-		ctx.writeAndFlush("Welcome to " + InetAddress.getLocalHost().getHostName() + " service!");
+		ctx.writeAndFlush("{\"key\":\"Welcome to " + InetAddress.getLocalHost().getHostName() + " service!\"}");
 		super.channelActive(ctx);
 	}
 
