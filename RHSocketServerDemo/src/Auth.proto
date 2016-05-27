@@ -1,0 +1,14 @@
+option java_package = "com.zrh.socket.protobuf.test";
+
+package auth;
+
+message AuthRequest {
+    required int32 user_id = 1;
+    required string password = 2;
+}
+
+message AuthResponse {
+	required int32 result_code = 1;
+	required string result_msg = 2;
+}
+
